@@ -4,17 +4,24 @@
     position: relative;
 }
 
-#container::before, #container::after {
-    content: "Special Text";
+#container::before {
+    content: "Before Element";
     color: #f00;
     font-size: 20px;
-    position: absolute;
-}
-
-#container::before {
-    left: -60px;
+    display: inline;
 }
 
 #container::after {
-    right: -60px; 
+	content: "After Element";
+    color: #f00;
+    font-size: 20px;
+    display: inline;
+}
+
+#container::before {
+    margin-right: 5px; /* Add some space between "Before" and the main content */
+}
+
+#container::after {
+    margin-left: 5px; /* Add some space between the main content and "After" */
 }
